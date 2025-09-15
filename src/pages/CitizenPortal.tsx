@@ -155,21 +155,6 @@ const CitizenPortal = () => {
                     </Select>
                   </div>
                 </div>
-
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="priority">Priority Level</Label>
-                    <Select>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Select priority" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="high">High - Urgent/Safety Issue</SelectItem>
-                        <SelectItem value="medium">Medium - Moderate Impact</SelectItem>
-                        <SelectItem value="low">Low - Minor Issue</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
                   
                   <div className="space-y-2">
                     <Label htmlFor="location">Location</Label>
@@ -182,7 +167,6 @@ const CitizenPortal = () => {
                       <Button variant="outline" size="icon">
                         <MapPin className="w-4 h-4" />
                       </Button>
-                    </div>
                   </div>
                 </div>
 
