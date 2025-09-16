@@ -295,19 +295,19 @@ const AdminDashboard = () => {
                   {mockComplaints.map((complaint) => (
                     <Card key={complaint.id} className="border-l-4 border-l-primary">
                       <CardContent className="pt-4">
-                        <div className="flex items-start justify-between">
-                          <div className="space-y-2 flex-1">
+                        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+                          <div className="space-y-2 flex-1 min-w-0">
                             <div className="flex items-center gap-2">
-                              <h3 className="font-semibold">{complaint.title}</h3>
+                              <h3 className="font-semibold truncate">{complaint.title}</h3>
                               <Badge variant="outline">#{complaint.id}</Badge>
                             </div>
-                            <p className="text-sm text-muted-foreground">
+                            <p className="text-sm text-muted-foreground truncate">
                               {complaint.department} • Submitted on {complaint.date}
                             </p>
-                            <p className="text-sm text-muted-foreground">
+                            <p className="text-sm text-muted-foreground truncate">
                               Assigned to: {complaint.assignedTo}
                             </p>
-                            <div className="flex gap-2">
+                            <div className="flex flex-wrap gap-2">
                               <Badge className={getStatusColor(complaint.status)}>
                                 {complaint.status}
                               </Badge>
@@ -316,14 +316,14 @@ const AdminDashboard = () => {
                               </Badge>
                             </div>
                           </div>
-                          <div className="flex gap-2">
-                            <Button variant="outline" size="sm">
+                          <div className="flex flex-wrap gap-2">
+                            <Button variant="outline" className="text-xs sm:text-sm">
                               Assign
                             </Button>
-                            <Button variant="outline" size="sm">
+                            <Button variant="outline" className="text-xs sm:text-sm">
                               Update Status
                             </Button>
-                            <Button size="sm" className="gradient-primary">
+                            <Button className="gradient-primary text-xs sm:text-sm">
                               View Details
                             </Button>
                           </div>
